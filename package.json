@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-github-markdown-css",     "homepage": "https://github.com/npmtest/node-npmtest-github-markdown-css",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-github-markdown-css.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  github-markdown-css (v2.6.0)  [![npm package](https://img.shields.io/npm/v/npmtest-github-markdown-css.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-github-markdown-css) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-github-markdown-css.svg)](https://travis-ci.org/npmtest/node-npmtest-github-markdown-css)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-github-markdown-css",
+    "keywords": [
+        "coverage",
+        "test",
+        "github-markdown-css"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_github_markdown_css.js",
+    "name": "npmtest-github-markdown-css",
+    "nameAlias": "npmtest_github_markdown_css",
+    "nameOriginal": "npmtest-github-markdown-css",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-github-markdown-css.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "2017.4.24"
+}
